@@ -1,5 +1,40 @@
 # Skill: Milestone Management
 
+## Update Progress (Most Common)
+
+When a user says something like:
+- "task X is done"
+- "AUT-01 completed"
+- "finished the Redis deployment"
+- "milestone 3 is done"
+- "mark Design Phase as completed"
+- "done with the frontend integration"
+
+You must:
+
+1. Read the project's `project.json`
+2. Find the matching milestone by:
+   - ID match (e.g. "AUT-01" → milestone with id 1 or title containing "AUT-01")
+   - Title match (fuzzy — "Redis deployment" matches "Deploy Redis instance for region caching")
+   - Number match (e.g. "task 3" → milestone with id 3)
+3. Set `"status": "completed"`
+4. Update `updated_at` to current ISO timestamp
+5. Write back `project.json`
+6. Respond with confirmation AND show updated progress:
+
+```
+✅ Marked "AUT-01: Deploy Redis instance" as completed!
+
+Progress: 2/5 milestones completed (40%)
+
+Remaining:
+🔲 [2026-03-30] AUT-02: Generate Discord Bot Token
+🔲 [2026-04-01] AUT-03: Integrate POST to /auth endpoint
+🔲 [2026-04-03] AUT-04: Implement Retry logic
+```
+
+If the user says something is "not done" or "reopen", set status back to `"pending"`.
+
 ## Add Milestone
 
 When the user asks to add a milestone:

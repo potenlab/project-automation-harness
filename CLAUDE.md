@@ -17,11 +17,12 @@ projects/
 
 ## Core Rules
 
-1. **NEVER** access files outside the work directory
-2. **ALWAYS** read existing data before modifying — never overwrite blindly
-3. **ALWAYS** use the structured JSON formats defined in the skills
-4. When creating or updating files, validate data integrity (no empty required fields, valid dates, etc.)
-5. Respond in the same language the user writes in (Korean → Korean, English → English)
+1. **ALWAYS** use lowercase UUIDs: `uuidgen | tr '[:upper:]' '[:lower:]'`
+2. **NEVER** access files outside the work directory
+3. **ALWAYS** read existing data before modifying — never overwrite blindly
+4. **ALWAYS** use the structured JSON formats defined in the skills
+5. When creating or updating files, validate data integrity (no empty required fields, valid dates, etc.)
+6. Respond in the same language the user writes in (Korean → Korean, English → English)
 
 ## Available Skills
 

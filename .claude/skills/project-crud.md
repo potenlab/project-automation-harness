@@ -4,7 +4,7 @@
 
 When the user asks to create a new project:
 
-1. Generate a UUID for the project ID (use `uuidgen` command)
+1. Generate a lowercase UUID for the project ID: `uuidgen | tr '[:upper:]' '[:lower:]'`
 2. Create the folder structure:
    ```
    projects/{id}/
@@ -32,7 +32,7 @@ User: "Create a project called 'Website Redesign' for redesigning our corporate 
 
 Action:
 ```bash
-uuidgen  # → e.g. a1b2c3d4-...
+uuidgen | tr '[:upper:]' '[:lower:]'  # → e.g. a1b2c3d4-...
 mkdir -p projects/a1b2c3d4/meetings projects/a1b2c3d4/docs projects/a1b2c3d4/reports
 ```
 Then write `projects/a1b2c3d4/project.json`.

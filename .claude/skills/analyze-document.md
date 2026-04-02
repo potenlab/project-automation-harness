@@ -4,7 +4,7 @@
 
 When the user uploads or references a document for project creation or update:
 
-1. Read the document (supports PDF, text, markdown, HWP/HWPX, images)
+1. Read the document (supports PDF, text, markdown, RTF, HWP/HWPX, images, Word/Excel)
 2. Extract structured information:
 
 ### For Meeting Notes / Transcripts

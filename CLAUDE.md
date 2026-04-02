@@ -34,6 +34,7 @@ Reference these skill files for detailed instructions on each operation:
 - `.claude/skills/member.md` — Manage project team members
 - `.claude/skills/report.md` — Generate project reports and summaries
 - `.claude/skills/analyze-document.md` — Analyze uploaded documents to extract project info
+- `.claude/skills/daily-checkin.md` — View team daily check-ins, individual progress, overdue tasks
 
 ## project.json Schema
 
